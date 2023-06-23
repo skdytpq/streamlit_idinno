@@ -1,6 +1,4 @@
 import streamlit as st
-st.markdown('<style type="text/css">body { margin: 0; padding: 0; }</style>', unsafe_allow_html=True)
-st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
 
 st.title('아이노유 서비스 크롤링 프로그램입니다.')
 option = st.selectbox('데이터 크롤링 타입 선택',
