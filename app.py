@@ -8,5 +8,5 @@ values = st.slider('크롤링 데이터 규모', 0.0, 100000.0, (5000.0,100000.0
 st.write('Values:', values)
 
 st.write('You selected:', option)
-
+st.markdown('<link href="styles.css" rel="stylesheet">', unsafe_allow_html=True)
 csv_file = st.file_uploader('크롤링 데이터 URL csv 를 업로드 해주세요', type=['csv'])
