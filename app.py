@@ -6,8 +6,8 @@ st.markdown(
     <style>
     #root > div:nth-child(1) > div.withScreencast > div > div > header {
         background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
-        background-size: cover;
-        background-position: center;
+        background-size: 50px;
+        background-position: left;
         padding: 20px;
     }
     
