@@ -10,15 +10,15 @@ st.markdown(
         background-position: center;
         padding: 20px;
     }
-     #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0::before {
+    
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0::before {
         content: none;
     }
-    </style>
-    """
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 st.title('아이노유 서비스 크롤링 프로그램입니다.')
 
