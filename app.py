@@ -9,7 +9,7 @@ st.markdown(
         background-size: 50px;
         background-position: left;
         background-repeat: no-repeat;
-        padding: 60px;
+        padding: 200px;
     }
     
     #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(1) {
