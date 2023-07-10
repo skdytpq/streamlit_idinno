@@ -27,3 +27,12 @@ csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세�
 
 # Add the image with the CSS class
 st.markdown('<div class="image-container"><img src="https://ethno-mining.com/resources/iknowyou/image/code/K01.png"></div>', unsafe_allow_html=True)
+# 버거 메뉴 + footer 수정
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden; }
+            footer {visibility: hidden;}
+            footer:after {visibility: visible; content:"footer!";}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
