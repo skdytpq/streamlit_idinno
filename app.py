@@ -1,17 +1,26 @@
+
+
+
 import streamlit as st
 
-# 커스텀 CSS를 사용하여 이미지를 툴바에 추가
+# 버거 메뉴 + footer 수정
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden; }
+            footer {visibility: hidden;}
+            footer:after {visibility: visible; content:"footer!";}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# CSS styling to position the image in the top left corner
 st.markdown(
     """
     <style>
-    .toolbar {
-        display: flex;
-        align-items: center;
+    .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
         padding: 10px;
-    }
-    
-    .toolbar-image {
-        margin-right: 10px;
     }
     </style>
     """,
@@ -28,18 +37,5 @@ st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
 
-# 툴바에 이미지 추가
-st.markdown(
-    """
-    <div class="toolbar">
-        <img class="toolbar-image" src="https://ethno-mining.com/resources/iknowyou/image/code/K01.png">
-        <span>툴바에 추가된 이미지입니다.</span>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
-
-# CSS 클래스와 함께 이미지 추가
+# Add the image with the CSS class
 st.markdown('<div class="image-container"><img src="https://ethno-mining.com/resources/iknowyou/image/code/K01.png"></div>', unsafe_allow_html=True)
