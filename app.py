@@ -10,3 +10,4 @@ st.write('Values:', values)
 st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv 를 업로드 해주세요', type=['csv'])
+st.image('https://ethno-mining.com/resources/iknowyou/image/code/K01.png', use_column_width=True)
