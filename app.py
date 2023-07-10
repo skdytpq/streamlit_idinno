@@ -8,8 +8,8 @@ st.markdown(
         background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px;
+        width: 10px;
+        height: 10px;
     }
     </style>
     """,
