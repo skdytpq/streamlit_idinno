@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import time
 # 커스텀 CSS를 사용하여 이미지를 대체할 요소에 추가
 st.markdown(
     """
@@ -76,6 +77,7 @@ st.write('Values:', values)
 st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
+time.sleep(3)
 file = pd.read_csv(csv_file)
 file_url = file['url']
 
