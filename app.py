@@ -4,7 +4,7 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 {
+    #root > div:nth-child(1) > div.withScreencast > div > div > header {
         background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
         background-size: cover;
         background-position: center;
