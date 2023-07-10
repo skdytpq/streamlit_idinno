@@ -1,22 +1,50 @@
 import streamlit as st
 
-# CSS styling to position the image in the top left corner
+# 커스텀 CSS를 사용하여 이미지를 툴바에 추가
 st.markdown(
     """
     <style>
-    .image-container {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .toolbar {
+        display: flex;
+        align-items: center;
         padding: 10px;
+    }
+    
+    .toolbar-image {
+        margin-right: 10px;
+    }
+    
+    .header-container {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+    
+    .header-title {
+        font-size: 24px;
+        margin-left: 10px;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-st.title('아이노유 서비스 크롤링 프로그램입니다.')
+# 헤더 컨테이너 생성
+header_container = st.beta_container()
+with header_container:
+    # 헤더 이미지 및 제목
+    st.markdown(
+        """
+        <div class="header-container">
+            <img class="toolbar-image" src="https://ethno-mining.com/resources/iknowyou/image/code/K01.png">
+            <h1 class="header-title">아이노유 서비스 크롤링 프로그램입니다.</h1>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
+# 데이터 선택 및 업로드
 option = st.selectbox('데이터 크롤링 타입 선택', ('아이노유 페르소나', '병원 페르소나', '패션 데이터 페르소나'))
 values = st.slider('크롤링 데이터 규모', 0.0, 100000.0, (5000.0, 100000.0))
 
@@ -24,15 +52,3 @@ st.write('Values:', values)
 st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
-
-# Add the image with the CSS class
-st.markdown('<div class="image-container"><img src="https://ethno-mining.com/resources/iknowyou/image/code/K01.png"></div>', unsafe_allow_html=True)
-# 버거 메뉴 + footer 수정
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden; }
-            footer {visibility: hidden;}
-            footer:after {visibility: visible; content:"footer!";}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
