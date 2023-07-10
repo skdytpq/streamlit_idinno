@@ -10,6 +10,11 @@ st.markdown(
         background-position: center;
         padding: 20px;
     }
+     #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0::before {
+        content: none;
+    }
+    </style>
+    """
     </style>
     """,
     unsafe_allow_html=True
