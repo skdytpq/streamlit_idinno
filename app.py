@@ -8,7 +8,8 @@ st.markdown(
         background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
         background-size: 50px;
         background-position: left;
-        padding: 20px;
+        background-repeat: no-repeat;
+        padding: 60px;
     }
     
     #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(1) {
