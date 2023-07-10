@@ -20,6 +20,14 @@ st.markdown(
     #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(3)::before{
         content: none;
     }
+    #root > div:nth-child(1) > div.withScreencast > div > div > header {
+        flex: 1;
+        background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
+        background-size: 150px;
+        background-position: left;
+        background-repeat: no-repeat;
+        padding: 20px;
+    }
     </style>
     """,
     unsafe_allow_html=True
