@@ -31,7 +31,7 @@ st.markdown(
 )
 
 # 헤더 컨테이너 생성
-header_container = st.beta_container()
+header_container = st.container()
 with header_container:
     # 헤더 이미지 및 제목
     st.markdown(
