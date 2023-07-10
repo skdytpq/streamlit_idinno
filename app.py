@@ -28,4 +28,4 @@ values = st.slider('크롤링 데이터 규모', 0.0, 100000.0, (5000.0, 100000.
 st.write('Values:', values)
 st.write('You selected:', option)
 
-csv_file = st.file_uploader('크롤링 데이터 URL csv를 
+csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
