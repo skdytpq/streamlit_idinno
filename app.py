@@ -1,17 +1,5 @@
-
-
-
 import streamlit as st
 
-# 버거 메뉴 + footer 수정
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden; }
-            footer {visibility: hidden;}
-            footer:after {visibility: visible; content:"footer!";}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # CSS styling to position the image in the top left corner
 st.markdown(
     """
