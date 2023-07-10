@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas
+import pandas as pd
 # 커스텀 CSS를 사용하여 이미지를 대체할 요소에 추가
 st.markdown(
     """
