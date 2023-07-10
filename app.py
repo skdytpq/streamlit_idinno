@@ -6,10 +6,10 @@ st.markdown(
     <style>
     #root > div:nth-child(1) > div.withScreencast > div > div > header {
         background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
-        background-size: 50px;
+        background-size: 200px;
         background-position: left;
         background-repeat: no-repeat;
-        padding: 200px;
+        padding: 10px;
     }
     
     #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(1) {
