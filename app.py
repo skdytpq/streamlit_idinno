@@ -11,6 +11,15 @@ st.markdown(
         background-repeat: no-repeat;
         padding: 20px;
     }
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(1)::before {
+        content: none;
+    }
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(2)::before{
+        content: none;
+    }
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(3)::before{
+        content: none;
+    }
     </style>
     """,
     unsafe_allow_html=True
