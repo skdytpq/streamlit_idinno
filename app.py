@@ -5,28 +5,21 @@ st.markdown(
     """
     <style>
     #root > div:nth-child(1) > div.withScreencast > div > div > header {
-        background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
-        background-size: 200px;
-        background-position: left;
-        background-repeat: no-repeat;
         padding: 10px;
     }
-    
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(1) {
-        display: none;
-    }
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(2) {
-        display: none;
-    }
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(3) {
-        display: none;
-    }
 
+    #root > div:nth-child(1) > div.withScreencast > div > div > header a {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
+        background-size: cover;
+        background-position: left;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 st.title('아이노유 서비스 크롤링 프로그램입니다.')
 
@@ -37,3 +30,13 @@ st.write('Values:', values)
 st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
+
+# 이미지를 링크로 감싸기
+st.markdown(
+    """
+    <a href="http://www.idinnolab.co.kr/" target="_blank">
+        <div id="custom-image"></div>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
