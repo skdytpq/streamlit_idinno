@@ -1,19 +1,14 @@
 import streamlit as st
 
-import streamlit as st
-
 # 커스텀 CSS를 사용하여 이미지를 대체할 요소에 추가
 st.markdown(
     """
     <style>
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(1),
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(2),
-    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 > div:nth-child(3) {
+    #root > div:nth-child(1) > div.withScreencast > div > div > header > div.css-14xtw13.e13qjvis0 {
         background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
         background-size: cover;
         background-position: center;
-        width: 20px;
-        height: 20px;
+        padding: 20px;
     }
     </style>
     """,
