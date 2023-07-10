@@ -76,3 +76,18 @@ st.write('Values:', values)
 st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
+
+hide_streamlit_style = """
+<style>
+#MainMenu { visibility: hidden; }
+footer {
+    visibility: hidden;
+    background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+footer:after { visibility: visible; content: "Iknowyou"; }
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
