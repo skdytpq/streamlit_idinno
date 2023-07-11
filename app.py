@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import time
+from crawling import url
+import os
 # 커스텀 CSS를 사용하여 이미지를 대체할 요소에 추가
 st.markdown(
     """
@@ -70,7 +72,7 @@ with header_container:
     )
 
 
-option = st.selectbox('데이터 크롤링 타입 선택', ('아이노유 페르소나', '병원 페르소나', '패션 데이터 페르소나'))
+option = st.selectbox('데이터 크롤링 타입 선택', ('무신사', '쿠팡', '패션 데이터'))
 values = st.slider('크롤링 데이터 규모', 0, 10000, (0, 10000))
 
 st.write('Values:', values)
@@ -79,10 +81,22 @@ st.write('You selected:', option)
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
 time.sleep(3)
 if csv_file is not None:
-    file = pd.read_csv(csv_file)
-    file_url = file['url']
+    try:
+        file = pd.read_csv(csv_file)
+        file_url = file['url']
+        url('무신사',2)
+        st.write('크롤링 진행중입니다...')
+        img_dir= os.listdir('img_dir')
+        for i in range(10):
+            p = os.path.join('img_dir',img_dir[i])
+            st.image(p)
+
+
+    except:
+        st.write('올바른 형태의 파일을 업로드 해주세요')
 else:
     pass
+
 
 hide_streamlit_style = """
 <style>
