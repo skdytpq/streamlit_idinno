@@ -78,7 +78,7 @@ st.write('You selected:', option)
 
 csv_file = st.file_uploader('크롤링 데이터 URL csv를 업로드 해주세요', type=['csv'])
 time.sleep(3)
-if file is not None:
+if csv_file is not None:
     file = pd.read_csv(csv_file)
     file_url = file['url']
 else:
