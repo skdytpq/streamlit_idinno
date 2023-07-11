@@ -87,13 +87,12 @@ if csv_file is not None:
     try:
         file = pd.read_csv(csv_file)
         file_url = file['url']
-        url('무신사',2)
+        u_list = url('무신사',4)
         st.write('크롤링 진행중입니다...')
-        img_dir= os.listdir('img_dir')
         st.write('이미지 디렉토리를 생성중입니다..')
-        for i in range(10):
-            p = os.path.join('img_dir',img_dir[i])
-            st.image(p)
+        st.image(u_list[0])
+#        for i in range(10):
+#            st.image(u_list[i])
 
 
     except:

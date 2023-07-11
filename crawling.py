@@ -35,7 +35,7 @@ def url(cat,value):
                         
                         img_src = 'https:' + soup.find_all('img', attrs={'class':'lazyload lazy'})[i]['src']
                         urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
-                        img = Image.open(f"imagedir/page{page}_shoe{i}.jpg")
+                        url_list.append(img_src)
                         
                 else : 
                     print(response.status_code)
@@ -45,3 +45,4 @@ def url(cat,value):
                 #c.to_csv('imagedir/image_info.csv')
                 False
             page += 1
+        return url_list
