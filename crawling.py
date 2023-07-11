@@ -20,7 +20,7 @@ def install(package, upgrade=True):
         print("# Package name might be differnt. please check it again.")
     except Exception as e:
         print(e)
-install('requirements.txt')
+#install('requirements.txt')
 from bs4 import BeautifulSoup
 import urllib.request
 from PIL import Image
