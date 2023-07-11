@@ -36,7 +36,6 @@ def url(cat,value):
                         url_list.append(url)
                         
                         img_src = 'http:' + soup.select('li > div.li_inner > div.list_img > a > img')[i]['data-original']
-                        urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
                         img_list.append(img_src)
                         
                         
