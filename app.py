@@ -90,8 +90,8 @@ if csv_file is not None:
         st.write('크롤링 진행중입니다...')
         u_list = url('무신사',2)
         st.write('이미지 디렉토리를 생성중입니다..')
-        st.write(u_list[0])
-        st.image(u_list[0])
+        st.write(u_list)
+        st.image(u_list)
 #        for i in range(10):
 #            st.image(u_list[i])
 

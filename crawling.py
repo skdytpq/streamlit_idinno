@@ -36,7 +36,7 @@ def url(cat,value):
                         
                         img_src = 'http:' + soup.select('li > div.li_inner > div.list_img > a > img')[i]['data-original']
                         urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
-                        url_list.append(img_src)
+                        
                         
                         
                                 
@@ -46,4 +46,4 @@ def url(cat,value):
                 #c.to_csv('imagedir/image_info.csv')
                 False
             page += 1
-        return url_list
+        return img_src
