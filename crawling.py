@@ -23,17 +23,17 @@ def url(cat,value):
                     html = response.text
                     soup = BeautifulSoup(response.text, 'html.parser')
                     for i in range(len(url)):
-                        review_num_soup = soup.find_all('span', attrs={'class':'count'})[i].get_text()
+                        review_num_soup = soup.select('li > div.li_inner > div.article_info > p.point > span.count')[i].get_text()
                         review_num.append(review_num_soup)
-        
-                        review_soup = soup.find_all('span', attrs={'class':'bar'})[i]['style'].split()[0]
+
+                        review_soup = soup.select('li > div.li_inner > div.article_info > p.point > span.img-score > span')[i]['style'].split()[0]
                         review_soup = re.sub(r'[^0-9]', '', review_soup)
                         review.append(review_soup)
                         
-                        url = 'https:' + soup.find_all('a', attrs={'class':'img-block'})[i]['href']
+                        url = soup.select('li > div.li_inner > div.list_img > a')[i]['href']
                         url_list.append(url)
                         
-                        img_src = 'https:' + soup.find_all('img', attrs={'class':'lazyload lazy'})[i]['src']
+                        img_src = 'http:' + soup.select('li > div.li_inner > div.list_img > a > img')[i]['data-original']
                         urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
                         url_list.append(img_src)
                         
