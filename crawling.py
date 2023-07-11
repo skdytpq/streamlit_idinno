@@ -14,10 +14,11 @@ def url(cat,value):
     page = 1
     if cat == '무신사':
         while page < value:
-            url = f'https://search.musinsa.com/search/musinsa/goods?q=신발&list_kind=small&sortCode=pop&sub_sort=&page={page}&display_cnt=0&saleGoods=false&includeSoldOut=false&popular=false&category1DepthCode=&category2DepthCodes=&category3DepthCodes=&selectedFilters=&category1DepthName=&category2DepthName=&brandIds=&price=&colorCodes=&contentType=&styleTypes=&includeKeywords=&excludeKeywords=&originalYn=N&tags=&saleCampaign=false&serviceType=&eventType=&type=&season=&measure=&openFilterLayout=N&selectedOrderMeasure=&d_cat_cd='
+
+            url = f'https://www.musinsa.com/search/musinsa/goods?q=%EC%8B%A0%EB%B0%9C&list_kind=small&sortCode=pop&sub_sort=&page={page}&display_cnt=0&saleGoods=&includeSoldOut=&setupGoods=&popular=&category1DepthCode=&category2DepthCodes=&category3DepthCodes=&selectedFilters=&category1DepthName=&category2DepthName=&brandIds=&price=&colorCodes=&contentType=&styleTypes=&includeKeywords=&excludeKeywords=&originalYn=N&tags=&campaignId=&serviceType=&eventType=&type=&season=&measure=&openFilterLayout=N&selectedOrderMeasure=&shoeSizeOption=&groupSale=&d_cat_cd=&attribute=&plusDeliveryYn'
             headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36", "Accept-Language": "ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3"}
             response = requests.get(url, headers=headers)
-        
+
             try:
                 if response.status_code == 200:
                     html = response.text
@@ -34,11 +35,11 @@ def url(cat,value):
                         url_list.append(url)
                         
                         img_src = 'http:' + soup.select('li > div.li_inner > div.list_img > a > img')[i]['data-original']
-                        #urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
+                        urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
                         url_list.append(img_src)
                         
-                else : 
-                    print(response.status_code)
+                        
+                                
             except:
                 #info = {'리뷰 개수' : review_num , '리뷰 점수' : review, '상품 링크' : url_list}
                 #c = pd.DataFrame(data = info)
