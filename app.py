@@ -92,6 +92,7 @@ if csv_file is not None:
         st.write('이미지 디렉토리를 생성중입니다..')
         st.write(img_list[0])
         st.image(img_list[0])
+        st.write('완료되었습니다.')
 #        for i in range(10):
 #            st.image(u_list[i])
 
