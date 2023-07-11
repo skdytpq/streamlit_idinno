@@ -11,6 +11,7 @@ def url(cat,value):
     review_num = []
     review = []
     url_list = []
+    img_list = []
     page = 1
     if cat == '무신사':
         while page < value:
@@ -36,6 +37,7 @@ def url(cat,value):
                         
                         img_src = 'http:' + soup.select('li > div.li_inner > div.list_img > a > img')[i]['data-original']
                         urllib.request.urlretrieve(img_src, f"imagedir/page{page}_shoe{i}.jpg")
+                        img_list.append(img_src)
                         
                         
                         
@@ -46,4 +48,4 @@ def url(cat,value):
                 #c.to_csv('imagedir/image_info.csv')
                 False
             page += 1
-        return img_src
+        return img_list
