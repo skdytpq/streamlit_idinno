@@ -48,4 +48,4 @@ def url(cat,value):
                 #c.to_csv('imagedir/image_info.csv')
                 False
             page += 1
-        return img_list
+    return img_list
