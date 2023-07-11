@@ -1,4 +1,5 @@
 import requests
+import pip
 def install(package, upgrade=True):
     # package install with upgrade or not
     if hasattr(pip, 'main'):
