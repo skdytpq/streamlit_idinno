@@ -87,7 +87,7 @@ if csv_file is not None:
     try:
         file = pd.read_csv(csv_file)
         file_url = file['url']
-        u_list = url('무신사',4)
+        u_list = url('무신사',2)
         st.write('크롤링 진행중입니다...')
         st.write('이미지 디렉토리를 생성중입니다..')
         st.write(u_list[0])
