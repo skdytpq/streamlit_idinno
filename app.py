@@ -90,6 +90,7 @@ if csv_file is not None:
         url('무신사',2)
         st.write('크롤링 진행중입니다...')
         img_dir= os.listdir('img_dir')
+        st.write('이미지 디렉토리를 생성중입니다..')
         for i in range(10):
             p = os.path.join('img_dir',img_dir[i])
             st.image(p)
