@@ -3,6 +3,29 @@ import pandas as pd
 import time
 from crawling import url
 import os
+import pip
+
+def install(package, upgrade=True):
+    # package install with upgrade or not
+    if hasattr(pip, 'main'):
+        if upgrade:
+            pip.main(['install', '--upgrade', package])
+        else:
+            pip.main(['install', package])
+    else:
+        if upgrade:
+            pip._internal.main(['install', '--upgrade', package])
+        else:
+            pip._internal.main(['install', package])
+
+    # import package
+    try:
+        eval(f"import {package}")
+    except ModuleNotFoundError:
+        print("# Package name might be differnt. please check it again.")
+    except Exception as e:
+        print(e)
+install('BeautifulSoup')
 # 커스텀 CSS를 사용하여 이미지를 대체할 요소에 추가
 st.markdown(
     """
