@@ -71,7 +71,7 @@ with header_container:
 
 
 option = st.selectbox('데이터 크롤링 타입 선택', ('아이노유 페르소나', '병원 페르소나', '패션 데이터 페르소나'))
-values = st.slider('크롤링 데이터 규모', 0.0, 100000.0, (5000.0, 100000.0))
+values = st.slider('크롤링 데이터 규모', 0, 10000, (0, 10000))
 
 st.write('Values:', values)
 st.write('You selected:', option)
