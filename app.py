@@ -89,7 +89,7 @@ with header_container:
     )
 
 
-option = st.selectbox('데이터 크롤링 타입 선택', ('무신사', '쿠팡', '패션 데이터'))
+option = st.selectbox('데이터 크롤링 타입 선택', ('무신사', '쿠팡', '패션 데이터','병원 이미지 데이터'))
 values = st.slider('크롤링 데이터 규모', 0, 10000, (0, 10000))
 
 st.write('Values:', values)
@@ -102,13 +102,12 @@ if csv_file is not None:
         file = pd.read_csv(csv_file)
         file_url = file['url']
         st.write('크롤링 진행중입니다...')
-        img_list = url('무신사',2)
+        img_list = url(option,2)
         st.write('이미지 디렉토리를 생성중입니다..')
         for i in range(10):
             st.image(img_list[i])
         st.write('완료되었습니다.')
-#        for i in range(10):
-#            st.image(u_list[i])
+
 
 
     except:
