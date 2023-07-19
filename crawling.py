@@ -47,4 +47,24 @@ def url(cat,value):
                 #c.to_csv('imagedir/image_info.csv')
                 False
             page += 1
+    if cat == '쿠팡':
+        while page < value:
+            url = f'https://www.coupang.com/np/search?q=%EC%8B%A0%EB%B0%9C&channel=user&component=&eventCategory=SRP&trcid=&traid=&sorter=scoreDesc&minPrice=&maxPrice=&priceRange=&filterType=&listSize=36&filter=&isPriceRange=false&brand=&offerCondition=&rating=0&page={page}&rocketAll=false&searchIndexingToken=1=9&backgroundColor='
+            headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36", "Accept-Language": "ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3"}
+            response = requests.get(url, headers=headers)
+
+        try:
+            if response.status_code == 200:
+                html = response.text
+                soup = BeautifulSoup(response.text, 'html.parser')
+                for i in range(len(url)):
+                    link = 'http:' + soup.select('li > a > dl > dt > img')[i]['src']
+                    text = soup.select('li > a > dl > dt > img')[i]['alt']
+                    img_list.append(link)
+
+            else : 
+                print(response.status_code)
+        except:
+            False
+        page += 1
     return img_list

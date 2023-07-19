@@ -59,6 +59,20 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+hide_streamlit_style = """
+<style>
+#MainMenu { visibility: hidden; }
+footer {
+    visibility: hidden;
+    background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+footer:after { visibility: visible; content: "Iknowyou"; }
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # 헤더 컨테이너 생성
 header_container = st.container()
@@ -103,17 +117,4 @@ else:
     pass
 
 
-hide_streamlit_style = """
-<style>
-#MainMenu { visibility: hidden; }
-footer {
-    visibility: hidden;
-    background-image: url('https://ethno-mining.com/resources/iknowyou/image/code/K01.png');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-}
-footer:after { visibility: visible; content: "Iknowyou"; }
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
